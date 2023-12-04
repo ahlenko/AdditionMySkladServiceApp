@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_white"
+    tools:context=".SelectionPage">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/logoPicture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/logoBottom"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toTopOf="@+id/topLine"
+        app:srcCompat="@drawable/ico_logo"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.265" />
+
+    <ImageView
+        android:id="@+id/logoText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/logoCentr2"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toTopOf="@+id/logoBottom"
+        app:srcCompat="@drawable/ico_logotext"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoCentr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoCentr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="@string/add_order_as"
+        android:textAlignment="center"
+        android:textColor="@color/fonts_color_blc"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/logoCentr5"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toTopOf="@+id/logoCentr" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoCentr5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <ImageButton
+        android:id="@+id/button_chengeToClient"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:stateListAnimator="@animator/def_animator"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toTopOf="@+id/logoCentr5"
+        app:srcCompat="@drawable/sel_smallbtn" />
+
+    <TextView
+        android:id="@+id/button_chengeToClientTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="@string/client"
+        android:textAlignment="center"
+        android:textColor="@color/back_white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/button_chengeToClient"
+        app:layout_constraintEnd_toEndOf="@+id/button_chengeToClient"
+        app:layout_constraintStart_toStartOf="@+id/button_chengeToClient"
+        app:layout_constraintTop_toTopOf="@+id/button_chengeToClient" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clientLayout"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toBottomOf="@+id/button_chengeToClient">
+
+        <TextView
+            android:id="@+id/titleClientLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="@string/client"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleClientEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputClientLine1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputClientLine1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inputClientLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <EditText
+            android:id="@+id/enterClientEmail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/inpt_frame1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/akcent_purple"
+            android:textCursorDrawable="@drawable/line_input"
+            app:layout_constraintBottom_toTopOf="@+id/titleClientPIB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleClientEmail"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/titleClientPIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/pib"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputClientLine2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputClientLine2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inputClientLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <EditText
+            android:id="@+id/enterClientPIB"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/inpt_frame1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:inputType="text|textPersonName"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/akcent_purple"
+            android:textCursorDrawable="@drawable/line_input"
+            app:layout_constraintBottom_toTopOf="@+id/titleClientPhNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleClientPIB"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/titleClientPhNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/phonenumber"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputClientLine3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputClientLine3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inputClientLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.76" />
+
+        <EditText
+            android:id="@+id/enterClientPhNumber"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/inpt_frame1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="093-568-8978"
+            android:inputType="phone"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/akcent_purple"
+            android:textCursorDrawable="@drawable/line_input"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleClientPhNumber"
+            tools:ignore="Autofill,LabelFor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/titleOR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="@string/OR"
+        android:textAlignment="center"
+        android:textColor="@color/fonts_color_blc"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toBottomOf="@+id/clientLayout" />
+
+    <ImageButton
+        android:id="@+id/button_changeToEmployee"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:stateListAnimator="@animator/def_animator"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toBottomOf="@+id/titleOR"
+        app:srcCompat="@drawable/sel_smallbtn" />
+
+    <TextView
+        android:id="@+id/button_changeToEmployeetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="@string/employee"
+        android:textAlignment="center"
+        android:textColor="@color/back_white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_changeToEmployee"
+        app:layout_constraintEnd_toEndOf="@+id/button_changeToEmployee"
+        app:layout_constraintStart_toStartOf="@+id/button_changeToEmployee"
+        app:layout_constraintTop_toTopOf="@+id/button_changeToEmployee" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/employeeLayout"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toBottomOf="@+id/button_changeToEmployee">
+
+        <TextView
+            android:id="@+id/titleEmployeeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="@string/employee"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleCompanyEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputEmployeeLine1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputEmployeeLine1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inputEmployeeLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <EditText
+            android:id="@+id/enterCompanyEmail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/inpt_frame1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/akcent_purple"
+            android:textCursorDrawable="@drawable/line_input"
+            app:layout_constraintBottom_toTopOf="@+id/titleEmployeeLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCompanyEmail"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/titleEmployeeLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputEmployeeLine2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputEmployeeLine2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inputEmployeeLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <EditText
+            android:id="@+id/enterEmployeeLogin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/inpt_frame1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/akcent_purple"
+            android:textCursorDrawable="@drawable/line_input"
+            app:layout_constraintBottom_toTopOf="@+id/titleEmployeePassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEmployeeLogin"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/titleEmployeePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/password"
+            android:textAlignment="center"
+            android:textColor="@color/fonts_color_blc"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputEmployeeLine3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputEmployeeLine3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inputEmployeeLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.76" />
+
+        <EditText
+            android:id="@+id/enterEmployeePassword"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/inpt_frame1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:inputType="text|textPassword"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/akcent_purple"
+            android:textCursorDrawable="@drawable/line_input"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEmployeePassword"
+            tools:ignore="Autofill,LabelFor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/button_toOrdering"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:stateListAnimator="@animator/def_animator"
+        app:layout_constraintEnd_toStartOf="@+id/rightLine"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toBottomOf="@+id/employeeLayout"
+        app:srcCompat="@drawable/sel_smallbtn" />
+
+    <TextView
+        android:id="@+id/button_toOrderingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="@string/addorder"
+        android:textAlignment="center"
+        android:textColor="@color/back_white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_toOrdering"
+        app:layout_constraintEnd_toEndOf="@+id/button_toOrdering"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/button_toOrdering"
+        app:layout_constraintTop_toTopOf="@+id/button_toOrdering" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
